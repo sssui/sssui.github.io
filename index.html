@@ -62,6 +62,46 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-notes" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/09/notes/" class="article-date">
+  <time datetime="2018-11-09T12:57:04.000Z" itemprop="datePublished">2018-11-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/09/notes/">关于node里的http.response.writeHead</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>还是多写写以免忘记了<br>关于node里的http.response.writeHead<br>response.writeHead(statusCode,[reasonPhrase],[headers])</p>
+<p>参数<br>statusCode – HTTP状态码 e.g. 404(未找到),200(请求成功)<br>reasonPhrase –(可选) 是字符串，用于简单说明 比如：“服务器因为维护暂时无法正常访问….”<br>headers –(可选) 是个object对象，设置响应头信息 ， 表示响应头的每个属性</p>
+<p>res.writeHead(200,{‘Content-Type’:’text/html;charset=UTF8’})–此格式可以识别html，编码格式是utf-8</p>
+<p>res.writeHead(200,{‘Content-Type’:’text/plain;charset=UTF8’})–不可识别Html结构</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/11/09/notes/" data-id="cjoa1oups0001m0tfeo8ev96x" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-easy-node" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/11/05/easy-node/" class="article-date">
@@ -90,7 +130,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/05/easy-node/" data-id="cjo4hs0dk0000ustfx9b4aqkk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/05/easy-node/" data-id="cjoa1ouo80000m0tfs6769roq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -127,7 +167,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/05/test/" data-id="cjo4hs0f60002ustfba29jc6j" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/05/test/" data-id="cjoa1ouqg0003m0tfvpaymhdg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -172,7 +212,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/05/hello-world/" data-id="cjo4hs0ev0001ustfv9mlykf8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/05/hello-world/" data-id="cjoa1ouqe0002m0tfbakg5kxn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -211,6 +251,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/11/09/notes/">关于node里的http.response.writeHead</a>
+          </li>
         
           <li>
             <a href="/2018/11/05/easy-node/">easy node</a>
