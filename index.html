@@ -84,18 +84,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>语句：<br>querystring.stringify()</p>
+        <p>语句：<br>1、querystring.stringify(a,b,c)<br>作用：序列化</p>
+<p>a:url参数（对象)<br>b:连接符（默认&amp;)<br>c:键值对符号符号（默认=）</p>
 <p>e.g.  querystring.stringify({name:’scott’,course:[‘jade’,’node’],from:’’})</p>
 <p>结果：’name=scott&amp;course=jade&amp;course=node&amp;from=’</p>
 <p>querystring.stringify({name:’scott’,course:[‘jade’,’node’],from:’’},’,’)</p>
 <p>结果：’name=scott,course=jade,course=node,from=’</p>
 <p>querystring.stringify({name:’scott’,course:[‘jade’,’node’],from:’’},’,’,’:’)</p>
 <p>结果：’name:scott,course:jade,course:node,from:’</p>
-<p>querystring.parse()<br>作用：反序列化</p>
+<p>2、querystring.parse(a,b,c)<br>作用：反序列化</p>
+<p>a:对象字符串<br>b:需要转换的属性连接符<br>c:键值对符号</p>
 <p>e.g. querystring.parse(‘name=scott,course=jade,course=node,from=’,’,’)</p>
 <p>结果：<br>{ name: ‘scott’, course: [ ‘jade’, ‘node’ ], from: ‘’ }</p>
-<p>querystring.escape()</p>
-<p>querystring.unescape()</p>
+<p>3、querystring.escape(string，para1,para2)</p>
+<p>4、querystring.unescape()</p>
 <p>转译与反转译语句<br>e.g.</p>
 <blockquote>
 <p>querystring.escape(‘&lt;哈哈&gt;’) –&gt;<br>‘%3C%E5%93%88%E5%93%88%3E’<br>querystring.unescape(‘%3C%E5%93%88%E5%93%88%3E’) –&gt;<br>‘&lt;哈哈&gt;’</p>
@@ -104,7 +106,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/13/note3/" data-id="cjofx2ddm0003m0tfwk5tgiof" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/13/note3/" data-id="cjofx8tzn0002kctfq6vdejaz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -146,7 +148,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/13/note2/" data-id="cjofx2ddk0002m0tfmp0brwkr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/13/note2/" data-id="cjofx8tzq0003kctfidpgd7gv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -186,7 +188,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/09/notes/" data-id="cjofx2ddo0004m0tfb57235wz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/09/notes/" data-id="cjofx8tzr0004kctfeqo9ahzm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -224,7 +226,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/05/easy-node/" data-id="cjofx2dd90000m0tf3anm0586" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/05/easy-node/" data-id="cjofx8tz90000kctfq2b825hi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -261,7 +263,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/05/test/" data-id="cjofx2ddp0005m0tft4viis3j" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/05/test/" data-id="cjofx8tzt0005kctfh1b95pq3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -306,7 +308,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/05/hello-world/" data-id="cjofx2ddi0001m0tf13yw51re" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/05/hello-world/" data-id="cjofx8tzj0001kctfgidnwb7j" class="article-share-link">Share</a>
       
       
     </footer>
