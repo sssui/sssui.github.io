@@ -62,6 +62,58 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-note3" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/13/note3/" class="article-date">
+  <time datetime="2018-11-13T15:31:48.000Z" itemprop="datePublished">2018-11-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/13/note3/">关于Query String</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>语句：<br>querystring.stringify()</p>
+<p>e.g.  querystring.stringify({name:’scott’,course:[‘jade’,’node’],from:’’})</p>
+<p>结果：’name=scott&amp;course=jade&amp;course=node&amp;from=’</p>
+<p>querystring.stringify({name:’scott’,course:[‘jade’,’node’],from:’’},’,’)</p>
+<p>结果：’name=scott,course=jade,course=node,from=’</p>
+<p>querystring.stringify({name:’scott’,course:[‘jade’,’node’],from:’’},’,’,’:’)</p>
+<p>结果：’name:scott,course:jade,course:node,from:’</p>
+<p>querystring.parse()<br>作用：反序列化</p>
+<p>e.g. querystring.parse(‘name=scott,course=jade,course=node,from=’,’,’)</p>
+<p>结果：<br>{ name: ‘scott’, course: [ ‘jade’, ‘node’ ], from: ‘’ }</p>
+<p>querystring.escape()</p>
+<p>querystring.unescape()</p>
+<p>转译与反转译语句<br>e.g.</p>
+<blockquote>
+<p>querystring.escape(‘&lt;哈哈&gt;’) –&gt;<br>‘%3C%E5%93%88%E5%93%88%3E’<br>querystring.unescape(‘%3C%E5%93%88%E5%93%88%3E’) –&gt;<br>‘&lt;哈哈&gt;’</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/11/13/note3/" data-id="cjofx2ddm0003m0tfwk5tgiof" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-note2" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/11/13/note2/" class="article-date">
@@ -94,7 +146,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/13/note2/" data-id="cjofw43co0001actfs81oen21" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/13/note2/" data-id="cjofx2ddk0002m0tfmp0brwkr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -134,7 +186,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/09/notes/" data-id="cjofw43cs0002actftmlsi9h0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/09/notes/" data-id="cjofx2ddo0004m0tfb57235wz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -172,7 +224,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/05/easy-node/" data-id="cjofw43bq0000actf9gmciwz7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/05/easy-node/" data-id="cjofx2dd90000m0tf3anm0586" class="article-share-link">Share</a>
       
       
     </footer>
@@ -209,7 +261,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/05/test/" data-id="cjofw43cu0003actfw1ppw8b4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/05/test/" data-id="cjofx2ddp0005m0tft4viis3j" class="article-share-link">Share</a>
       
       
     </footer>
@@ -254,7 +306,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/05/hello-world/" data-id="cjofw43dd0004actf56o48dm6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/05/hello-world/" data-id="cjofx2ddi0001m0tf13yw51re" class="article-share-link">Share</a>
       
       
     </footer>
@@ -295,6 +347,10 @@
       <ul>
         
           <li>
+            <a href="/2018/11/13/note3/">关于Query String</a>
+          </li>
+        
+          <li>
             <a href="/2018/11/13/note2/">关于URL网址解析相关知识点</a>
           </li>
         
@@ -308,10 +364,6 @@
         
           <li>
             <a href="/2018/11/05/test/">test</a>
-          </li>
-        
-          <li>
-            <a href="/2018/11/05/hello-world/">Hello World</a>
           </li>
         
       </ul>

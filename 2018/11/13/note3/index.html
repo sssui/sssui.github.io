@@ -5,15 +5,19 @@
   
 
   
-  <title>Archives: 2018 | </title>
+  <title>关于Query String | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+  <meta name="description" content="语句：querystring.stringify() e.g.  querystring.stringify({name:’scott’,course:[‘jade’,’node’],from:’’}) 结果：’name=scott&amp;amp;course=jade&amp;amp;course=node&amp;amp;from=’ querystring.stringify({name:’scott’,cour">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于Query String">
+<meta property="og:url" content="http://yoursite.com/2018/11/13/note3/index.html">
 <meta property="og:site_name">
+<meta property="og:description" content="语句：querystring.stringify() e.g.  querystring.stringify({name:’scott’,course:[‘jade’,’node’],from:’’}) 结果：’name=scott&amp;amp;course=jade&amp;amp;course=node&amp;amp;from=’ querystring.stringify({name:’scott’,cour">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-13T15:51:59.045Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title">
+<meta name="twitter:title" content="关于Query String">
+<meta name="twitter:description" content="语句：querystring.stringify() e.g.  querystring.stringify({name:’scott’,course:[‘jade’,’node’],from:’’}) 结果：’name=scott&amp;amp;course=jade&amp;amp;course=node&amp;amp;from=’ querystring.stringify({name:’scott’,cour">
   
     <link rel="alternate" href="/atom.xml" title="" type="application/atom+xml">
   
@@ -60,135 +64,67 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/11/13/note3/" class="archive-article-date">
-  <time datetime="2018-11-13T15:31:48.000Z" itemprop="datePublished">Nov 13</time>
+        <section id="main"><article id="post-note3" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/13/note3/" class="article-date">
+  <time datetime="2018-11-13T15:31:48.000Z" itemprop="datePublished">2018-11-13</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/13/note3/">关于Query String</a>
+    <h1 class="article-title" itemprop="name">
+      关于Query String
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/11/13/note2/" class="archive-article-date">
-  <time datetime="2018-11-13T09:47:15.000Z" itemprop="datePublished">Nov 13</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/13/note2/">关于URL网址解析相关知识点</a>
-    </h1>
-  
+        <p>语句：<br>querystring.stringify()</p>
+<p>e.g.  querystring.stringify({name:’scott’,course:[‘jade’,’node’],from:’’})</p>
+<p>结果：’name=scott&amp;course=jade&amp;course=node&amp;from=’</p>
+<p>querystring.stringify({name:’scott’,course:[‘jade’,’node’],from:’’},’,’)</p>
+<p>结果：’name=scott,course=jade,course=node,from=’</p>
+<p>querystring.stringify({name:’scott’,course:[‘jade’,’node’],from:’’},’,’,’:’)</p>
+<p>结果：’name:scott,course:jade,course:node,from:’</p>
+<p>querystring.parse()<br>作用：反序列化</p>
+<p>e.g. querystring.parse(‘name=scott,course=jade,course=node,from=’,’,’)</p>
+<p>结果：<br>{ name: ‘scott’, course: [ ‘jade’, ‘node’ ], from: ‘’ }</p>
+<p>querystring.escape()</p>
+<p>querystring.unescape()</p>
+<p>转译与反转译语句<br>e.g.</p>
+<blockquote>
+<p>querystring.escape(‘&lt;哈哈&gt;’) –&gt;<br>‘%3C%E5%93%88%E5%93%88%3E’<br>querystring.unescape(‘%3C%E5%93%88%E5%93%88%3E’) –&gt;<br>‘&lt;哈哈&gt;’</p>
+</blockquote>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/11/09/notes/" class="archive-article-date">
-  <time datetime="2018-11-09T12:57:04.000Z" itemprop="datePublished">Nov 9</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/09/notes/">关于node里的http.response.writeHead</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/11/05/easy-node/" class="archive-article-date">
-  <time datetime="2018-11-05T15:59:07.000Z" itemprop="datePublished">Nov 5</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/11/13/note3/" data-id="cjofx2ddm0003m0tfwk5tgiof" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/05/easy-node/">easy node</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/11/05/test/" class="archive-article-date">
-  <time datetime="2018-11-05T11:23:18.000Z" itemprop="datePublished">Nov 5</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/05/test/">test</a>
-    </h1>
-  
-
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/11/05/hello-world/" class="archive-article-date">
-  <time datetime="2018-11-05T04:51:23.609Z" itemprop="datePublished">Nov 5</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/05/hello-world/">Hello World</a>
-    </h1>
   
+    <a href="/2018/11/13/note2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">关于URL网址解析相关知识点</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-  
-    </div></section>
-  
-
 
 </section>
         
