@@ -14,7 +14,7 @@
 <meta property="og:site_name">
 <meta property="og:description" content="DNS（域名服务器）：是进行域名和与之相应的IP地址转换的服务器。 域名解析 1 在客户端输入一个域名，如www.imooc.com  –&amp;gt; 客户端向本地的DNS服务器发起请求，本地DNS服务器先查看域名与ip的对应关系（查看缓存），如果有该条记录，则将对应的ip返回客户端 2 缓存中没有记录，本地DNS服务器就会像根DNS服务器发起请求，根DNS服务器会返回本地DNS服务器消息：可以向.c">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-14T12:57:10.502Z">
+<meta property="og:updated_time" content="2018-11-14T13:23:08.352Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="http及相关知识">
 <meta name="twitter:description" content="DNS（域名服务器）：是进行域名和与之相应的IP地址转换的服务器。 域名解析 1 在客户端输入一个域名，如www.imooc.com  –&amp;gt; 客户端向本地的DNS服务器发起请求，本地DNS服务器先查看域名与ip的对应关系（查看缓存），如果有该条记录，则将对应的ip返回客户端 2 缓存中没有记录，本地DNS服务器就会像根DNS服务器发起请求，根DNS服务器会返回本地DNS服务器消息：可以向.c">
@@ -93,11 +93,18 @@
 <p>我的理解：<br>简单来说，如果本地DNS服务器没有该域名的缓存，本地DNS服务器会逐次向根DNS服务器，域服务器，域名解析服务器发请求，最后由域名解析服务器将查询结果返回本地DNS服务器。</p>
 <p>3 本地DNS服务器收到返回到查询结果时，一是要将结果返回给客户端，二是要更新本地缓存，把记录保存在缓存里。</p>
 <p>4 域名解析完成以后拿到域名对应的ip地址，发起http三次握手</p>
+<p>5 请求方法：<br>  GET：获取数据<br>  POST:指定资源提交数据<br>  PUT：向指定位置上上传内容<br>  DELETE：请求服务器删除标识的某个资源<br>  HEAD:获取资源（类似GET）</p>
+<p>6 状态码：</p>
+<p>  1xx:请求已接收，继续处理</p>
+<p>  2xx:请求已接收并处理完 如200：客户端请求成功</p>
+<p>  3xx:重定向</p>
+<p>  4xx:客户端错误（请求有语法错误或是无法实现）<br>  如400：客户端请求有语法错误<br>  401：请求未经过授权<br>  403：服务端收到请求但拒绝服务 （权限问题）<br>  404：未找到</p>
+<p>  5xx:服务器端有错误<br>  如500：服务器端发生不可预计错误        503：服务器端当前还不能处理客户端的请求</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/14/note4/" data-id="cjoh68f310002astfbud6y79h" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/14/note4/" data-id="cjoh7cxbx0004potfsmjo5tvo" class="article-share-link">Share</a>
       
       
     </footer>
