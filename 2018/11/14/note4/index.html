@@ -5,19 +5,19 @@
   
 
   
-  <title>关于URL网址解析相关知识点 | </title>
+  <title>http及相关知识 | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="URI : 统一资源标识符–字符串格式规范URL : 统一资源定位符–网址 语句：url.parse(urlstr,[parseQueryString],[stashesDenoteHost])–解析URL url.format(urlobj) –格式拼接，获取正确的能解析的地址 –即生成URL–将url对象格式化为url字符串 url.resolve(from,to) –拼接地址–即拼接URL">
+  <meta name="description" content="DNS（域名服务器）：是进行域名和与之相应的IP地址转换的服务器。 域名解析 1 在客户端输入一个域名，如www.imooc.com  –&amp;gt; 客户端向本地的DNS服务器发起请求，本地DNS服务器先查看域名与ip的对应关系（查看缓存），如果有该条记录，则将对应的ip返回客户端 2 缓存中没有记录，本地DNS服务器就会像根DNS服务器发起请求，根DNS服务器会返回本地DNS服务器消息：可以向.c">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于URL网址解析相关知识点">
-<meta property="og:url" content="http://yoursite.com/2018/11/13/note2/index.html">
+<meta property="og:title" content="http及相关知识">
+<meta property="og:url" content="http://yoursite.com/2018/11/14/note4/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="URI : 统一资源标识符–字符串格式规范URL : 统一资源定位符–网址 语句：url.parse(urlstr,[parseQueryString],[stashesDenoteHost])–解析URL url.format(urlobj) –格式拼接，获取正确的能解析的地址 –即生成URL–将url对象格式化为url字符串 url.resolve(from,to) –拼接地址–即拼接URL">
+<meta property="og:description" content="DNS（域名服务器）：是进行域名和与之相应的IP地址转换的服务器。 域名解析 1 在客户端输入一个域名，如www.imooc.com  –&amp;gt; 客户端向本地的DNS服务器发起请求，本地DNS服务器先查看域名与ip的对应关系（查看缓存），如果有该条记录，则将对应的ip返回客户端 2 缓存中没有记录，本地DNS服务器就会像根DNS服务器发起请求，根DNS服务器会返回本地DNS服务器消息：可以向.c">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-13T15:24:24.517Z">
+<meta property="og:updated_time" content="2018-11-14T12:57:10.502Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于URL网址解析相关知识点">
-<meta name="twitter:description" content="URI : 统一资源标识符–字符串格式规范URL : 统一资源定位符–网址 语句：url.parse(urlstr,[parseQueryString],[stashesDenoteHost])–解析URL url.format(urlobj) –格式拼接，获取正确的能解析的地址 –即生成URL–将url对象格式化为url字符串 url.resolve(from,to) –拼接地址–即拼接URL">
+<meta name="twitter:title" content="http及相关知识">
+<meta name="twitter:description" content="DNS（域名服务器）：是进行域名和与之相应的IP地址转换的服务器。 域名解析 1 在客户端输入一个域名，如www.imooc.com  –&amp;gt; 客户端向本地的DNS服务器发起请求，本地DNS服务器先查看域名与ip的对应关系（查看缓存），如果有该条记录，则将对应的ip返回客户端 2 缓存中没有记录，本地DNS服务器就会像根DNS服务器发起请求，根DNS服务器会返回本地DNS服务器消息：可以向.c">
   
     <link rel="alternate" href="/atom.xml" title="" type="application/atom+xml">
   
@@ -64,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-note2" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="post-note4" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/11/13/note2/" class="article-date">
-  <time datetime="2018-11-13T09:47:15.000Z" itemprop="datePublished">2018-11-13</time>
+    <a href="/2018/11/14/note4/" class="article-date">
+  <time datetime="2018-11-14T12:10:43.000Z" itemprop="datePublished">2018-11-14</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      关于URL网址解析相关知识点
+      http及相关知识
     </h1>
   
 
@@ -86,17 +86,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>URI : 统一资源标识符–字符串格式规范<br>URL : 统一资源定位符–网址</p>
-<p>语句：<br>url.parse(urlstr,[parseQueryString],[stashesDenoteHost])–解析URL</p>
-<p>url.format(urlobj) –格式拼接，获取正确的能解析的地址 –即生成URL–将url对象格式化为url字符串</p>
-<p>url.resolve(from,to) –拼接地址–即拼接URL</p>
-<p>url地址的组成部分</p>
-<p>protbcol:底层使用的协议 e.g. http<br>slashes:是否有协议的双斜线<br>host:服务器的地址或是域名<br>port:端口<br>hostname:主机名<br>hash:哈希值–代表网页的一个位置<br>search：查询字符串的参数<br>pathname:路径名<br>Path:路径<br>href:超链接</p>
+        <p>DNS（域名服务器）：是进行域名和与之相应的IP地址转换的服务器。</p>
+<p>域名解析</p>
+<p>1 在客户端输入一个域名，如<a href="http://www.imooc.com" target="_blank" rel="noopener">www.imooc.com</a><br>  –&gt; 客户端向本地的DNS服务器发起请求，本地DNS服务器先查看域名与ip的对应关系（查看缓存），如果有该条记录，则将对应的ip返回客户端</p>
+<p>2 缓存中没有记录，本地DNS服务器就会像根DNS服务器发起请求，根DNS服务器会返回本地DNS服务器消息：可以向.com域服务器发起请求。 .com域服务器收到请求后将域名的解析器的地址告诉本地DNS服务器，本地DNS服务器收到消息后，像域名解析服务器发起请求，域名解析服务器（这里的 imooc.com )将查询结果(这里的<a href="http://www.imooc.com" target="_blank" rel="noopener">www.imooc.com</a> )返回本地DNS服务器。</p>
+<p>我的理解：<br>简单来说，如果本地DNS服务器没有该域名的缓存，本地DNS服务器会逐次向根DNS服务器，域服务器，域名解析服务器发请求，最后由域名解析服务器将查询结果返回本地DNS服务器。</p>
+<p>3 本地DNS服务器收到返回到查询结果时，一是要将结果返回给客户端，二是要更新本地缓存，把记录保存在缓存里。</p>
+<p>4 域名解析完成以后拿到域名对应的ip地址，发起http三次握手</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/13/note2/" data-id="cjoh68f3k0006astfw0i6ajxf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/14/note4/" data-id="cjoh68f310002astfbud6y79h" class="article-share-link">Share</a>
       
       
     </footer>
@@ -105,19 +106,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/11/13/note3/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          关于Query String
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/11/09/notes/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/11/13/note3/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">关于node里的http.response.writeHead</div>
+      <div class="article-nav-title">关于Query String</div>
     </a>
   
 </nav>
