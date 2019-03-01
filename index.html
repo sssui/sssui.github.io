@@ -62,6 +62,199 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-about-vue" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/16/about-vue/" class="article-date">
+  <time datetime="2019-02-16T15:01:26.000Z" itemprop="datePublished">2019-02-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/16/about-vue/">about vue</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、 v-model：数据双向绑定，互相干扰，一方发生变化，另一方也会随之变化。<br>2、 v-on：事件绑定<br>3、 v-for：循环功能，循环提取一个数组或一个对象的所有项<br>Vue的最大的特点是除去了对DOM的直接操作，是对数据进行变化。<br>   v-bind:可以用于响应式的更新html特性</p>
+<p>4、</p>
+<p>MVP模式（Model,View,Presenter):Model层-数据层，Presenter层-控制层，View-视图层</p>
+<p>MVVM模式</p>
+<p>5、 Vue.component–创建全局组件<br>   v-bind:绑定父组件中的变量传给props，组件中通过props获取。</p>
+<p>–关于条件渲染–<br>6、 v-if，v-else-if,v-else的标签要连在一起写，中间不要加其他的语句<br>7、 vue在渲染时会尽量的复用元素，给dom元素加上key值可以保证标签的唯一性 如<input key="usernalme"> ,<div :key="item.id"></div> ,同时选择key值的时候尽量不要用Index的值作为key值</p>
+<p>–关于列表渲染–</p>
+<p>8、<br>关于数组的数据变异方法：<br>方法一：改变数据的引用<br>方法二：应用以下七种方法，不能直接始用下标来操作数组，否则在页面上显示不了改变的数据。</p>
+<p>  splice（）–截取或者操作数组的一个方法，如vm.list.splice(1,1,{id=”222” , text=”2”}) –意思是从下标是1的地方开始删除一条，并且往里面增加一条id为222，text为2的数据<br>  push:在数组后面添加一个元素<br>  pop:删除数组最后一个元素<br>  shift：把数组第一项删除<br>  unshift:往数组的第一项加内容<br>  sort：数组排序<br>  reverse：数组取反</p>
+<p>方法三:使用vue中的set方法<br>  如 userinfo[1,2,3]<br>  要变更数据将下标为0的数据变为3–<br>  vm.set(userinfo,0,3)，<br>  或使用vue的set实例方法–<br>  vm.$set(userinfo,0,3)</p>
+<p>9、如果有偶多个循环的列表同时渲染，可以使用template模板占位符，template标签不会被渲染到页面</p>
+<p>10、关于对对象的循环：动态往对象里面添加键名与键值是没有用的，也要修改引用，即将原来的对象数据复制到控制台后再在对象里面添加需要加的键名（key)与键值–[name(键名key):Lee(键值)]。<br>但是可以直接修改已经存在的键名的键值</p>
+<p>方法二：使用set方法：vue.set(obj,key,value)</p>
+<p>–总的来说vue的set方法–<br>对象：<br>全局使用：Vue.set(obj,key,value)<br>vue实例：vm.$set(obj,key,value)<br>数组：<br>全局使用：Vue.set(arr,index,value)<br>vue实例：vm.$set(arr,index,value)</p>
+<p>–关于组件的细节点–</p>
+<p>11、组件中用is来解决标签规范问题，table标签下必须是tr,td,同样，ul下面是li，select下是option</p>
+<p><tr is="row"> row组件中有tr,td</tr></p>
+<p>12、子组件的data必须是函数，不是对象，且必须返回对象</p>
+<p>13、ref的使用：<br>    1.在标签中定义如ref=”tag”<br>    2.使用：this.$refs.tag—表示当前标签的节点</p>
+<p>–父子组件间的数据传递–</p>
+<p>14、<br>    1.父组件向子组件传值：<br>      1.1 子组件通过props接收<br>      1.2 单向数据流：父组件可以随意向子组件传递参数，子组件不可以改父组件的参数，如果要改变参数，子组件在data中定义一个变量来接受父组件变量的值再进行修改<br>    2.子组件向父组件传值：使用this.$emit(‘方法名’，参数1，参数2…)可携带多个参数</p>
+<p>–非父子组件间的传值–<br>15、<br>    1、Vuex<br>    2、总线机制/Bus/发布订阅模式/观察者模式<br>    2.1<br>    在Vue的prototype上定义bus（Vue实例）–Vue.prototype.bus = new Vue();<br>    2.2<br>    在组件的methods定义的方法里使用 this.bus.$emit(‘事件名’, value); 使用总线上的bus属性向外触发事件并携带value<br>    2.3<br>    在组件的mounted生命周期钩子里使用this.bus.$on(‘事件名’, function(value){});$on来监听通过bus向外触发的事件并获取携带的值，然后在回调函数里进行操作。</p>
+<p>–插槽–<br>16、<br>    作用：希望子组件内展示父组件内传递来的dom<br>    solt：在子组件内直接放dom，在组件的tempalte中用<slot></slot>来代替这个dom使用<br>    可以在slot中定义默认值<br>    具名插槽：slot=””取名<br>    slot里 name=“”取名<br>    通过props传值时，v-html必须包裹div （template没用）</p>
+<p>–在Vue中同时使用过渡与动画–<br>17、<br>    1.在需要设置过度动画的元素外包裹<transition>标签，然后再设置对应的样式（v-enter,v-enter-active;v-leave-to,v-leave-active)<br>    2.如果不想用默认的类，可以自定义类：enter-active-class=”active”,然后写.active的样式<br>    3.使用animate.css：引入animate.css后，在需要动画的标签外的transition标签里添加对应属性，比如enter-active-class=“animated swing”，leave-active-class=“animated shake”<br>    4.选择以哪种动画为最佳时长：type=”transition”<br>    自定义动画时长：:duration=”5000”<br>    或单独分别设置出场入场动画：:duration={enter: 5000, leave:1000}</transition></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/02/16/about-vue/" data-id="cjsq04k3i00029ctfy2a1lep2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-a" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/16/a/" class="article-date">
+  <time datetime="2019-02-16T14:05:28.802Z" itemprop="datePublished">2019-02-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/02/16/a/" data-id="cjsq04k1z00009ctfztr7afue" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-new" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/11/new/" class="article-date">
+  <time datetime="2019-02-11T11:33:57.994Z" itemprop="datePublished">2019-02-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/02/11/new/" data-id="cjsq04k2r00019ctftpvwcq0m" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-about-wechat" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/03/about-wechat/" class="article-date">
+  <time datetime="2019-02-03T12:59:17.000Z" itemprop="datePublished">2019-02-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/03/about-wechat/">学习微信小程序的一些笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近开始了微信小程序的学习，小的，细碎的知识点太多了…</p>
+<p>–image–<br>image组件默认宽度300px，高度225px；<br>物理分辨率rpx是逻辑像素px的两倍，即2:1；</p>
+<p>rpx能适应不同机型不同分辨率的图片的大小，如果在小程序中使用的是px  ，说明在所有的机型上都显示同样的大小，视觉与布局关系会有失调的状况</p>
+<p>–text–<br>只有text包围的文字在手机上才能长按选中，text可以嵌套；<br>不在标签中的文本在使用中用户可以浏览但是不能选中，</p>
+<p>–关于页面布局–</p>
+<p>1 在全局里相同的样式可以放到app.wxss文件中<br>2 window选项是配置导航栏的属性<br>3 关于高度设计，如果没有设定，则会自己适应内部元素高度宽度。如果需要全部页面都包围，则可以在page标签里面设置。因为page标签中包含了页面里的所有标签</p>
+<p>–swiper组件–<br>可通过改组件实现轮播，不止是图片，还可以放其他的元素<br>1 swiper-item的宽和高自动设置为100% ，如果要控制高宽，则需要在swiper中设置。<br>2 vertical=true可设置纵向滚动</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/02/03/about-wechat/" data-id="cjsq04k3m00039ctfr2jrla2o" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wechat/">wechat</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-note6" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/15/note6/" class="article-date">
+  <time datetime="2018-11-15T13:53:18.000Z" itemprop="datePublished">2018-11-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/15/note6/">note6</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/11/15/note6/" data-id="cjsq04k4600089ctf472opd0m" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-note4" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/11/14/note4/" class="article-date">
@@ -102,7 +295,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/14/note4/" data-id="cjoh7cxbx0004potfsmjo5tvo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/14/note4/" data-id="cjsq04k4c000b9ctfr75mdlcm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -154,7 +347,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/13/note3/" data-id="cjoh7cxbv0003potfr0jet772" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/13/note3/" data-id="cjsq04k4m000c9ctfkbk39r95" class="article-share-link">Share</a>
       
       
     </footer>
@@ -196,7 +389,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/13/note2/" data-id="cjoh7cxbn0001potfz5dev6lp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/13/note2/" data-id="cjsq04k4n000d9ctfz2x33el4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -236,7 +429,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/09/notes/" data-id="cjoh7cxc40006potfgnuj8xr1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/09/notes/" data-id="cjsq04k4700099ctfc8bt5wl0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -274,89 +467,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/05/easy-node/" data-id="cjoh7cxbb0000potffgnr3vxk" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-test" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/11/05/test/" class="article-date">
-  <time datetime="2018-11-05T11:23:18.000Z" itemprop="datePublished">2018-11-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/05/test/">test</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>测试测试测试</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/05/test/" data-id="cjoh7cxbz0005potfhlbmt9zt" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/11/05/hello-world/" class="article-date">
-  <time datetime="2018-11-05T04:51:23.609Z" itemprop="datePublished">2018-11-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/05/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/05/hello-world/" data-id="cjoh7cxbs0002potfaoip25r2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/05/easy-node/" data-id="cjsq04k3o00049ctfnphjvdch" class="article-share-link">Share</a>
       
       
     </footer>
@@ -367,6 +478,11 @@
 
   
 
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+  </nav>
 
 </section>
         
@@ -376,15 +492,29 @@
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/wechat/">wechat</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/wechat/" style="font-size: 10px;">wechat</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
     </div>
   </div>
 
@@ -397,23 +527,23 @@
       <ul>
         
           <li>
-            <a href="/2018/11/14/note4/">http及相关知识</a>
+            <a href="/2019/02/16/about-vue/">about vue</a>
           </li>
         
           <li>
-            <a href="/2018/11/13/note3/">关于Query String</a>
+            <a href="/2019/02/16/a/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2018/11/13/note2/">关于URL网址解析相关知识点</a>
+            <a href="/2019/02/11/new/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2018/11/09/notes/">关于node里的http.response.writeHead</a>
+            <a href="/2019/02/03/about-wechat/">学习微信小程序的一些笔记</a>
           </li>
         
           <li>
-            <a href="/2018/11/05/easy-node/">easy node</a>
+            <a href="/2018/11/15/note6/">note6</a>
           </li>
         
       </ul>
@@ -428,7 +558,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2018 <br>
+      &copy; 2019 <br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>

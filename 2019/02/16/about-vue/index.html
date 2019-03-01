@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>about vue | </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1、 v-model：数据双向绑定，互相干扰，一方发生变化，另一方也会随之变化。2、 v-on：事件绑定3、 v-for：循环功能，循环提取一个数组或一个对象的所有项Vue的最大的特点是除去了对DOM的直接操作，是对数据进行变化。   v-bind:可以用于响应式的更新html特性 4、 MVP模式（Model,View,Presenter):Model层-数据层，Presenter层-控制层，V">
+<meta property="og:type" content="article">
+<meta property="og:title" content="about vue">
+<meta property="og:url" content="http://yoursite.com/2019/02/16/about-vue/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="1、 v-model：数据双向绑定，互相干扰，一方发生变化，另一方也会随之变化。2、 v-on：事件绑定3、 v-for：循环功能，循环提取一个数组或一个对象的所有项Vue的最大的特点是除去了对DOM的直接操作，是对数据进行变化。   v-bind:可以用于响应式的更新html特性 4、 MVP模式（Model,View,Presenter):Model层-数据层，Presenter层-控制层，V">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-02-20T15:11:59.309Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="about vue">
+<meta name="twitter:description" content="1、 v-model：数据双向绑定，互相干扰，一方发生变化，另一方也会随之变化。2、 v-on：事件绑定3、 v-for：循环功能，循环提取一个数组或一个对象的所有项Vue的最大的特点是除去了对DOM的直接操作，是对数据进行变化。   v-bind:可以用于响应式的更新html特性 4、 MVP模式（Model,View,Presenter):Model层-数据层，Presenter层-控制层，V">
+  
+    <link rel="alternate" href="/atom.xml" title="" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo"></a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-about-vue" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/16/about-vue/" class="article-date">
+  <time datetime="2019-02-16T15:01:26.000Z" itemprop="datePublished">2019-02-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      about vue
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、 v-model：数据双向绑定，互相干扰，一方发生变化，另一方也会随之变化。<br>2、 v-on：事件绑定<br>3、 v-for：循环功能，循环提取一个数组或一个对象的所有项<br>Vue的最大的特点是除去了对DOM的直接操作，是对数据进行变化。<br>   v-bind:可以用于响应式的更新html特性</p>
+<p>4、</p>
+<p>MVP模式（Model,View,Presenter):Model层-数据层，Presenter层-控制层，View-视图层</p>
+<p>MVVM模式</p>
+<p>5、 Vue.component–创建全局组件<br>   v-bind:绑定父组件中的变量传给props，组件中通过props获取。</p>
+<p>–关于条件渲染–<br>6、 v-if，v-else-if,v-else的标签要连在一起写，中间不要加其他的语句<br>7、 vue在渲染时会尽量的复用元素，给dom元素加上key值可以保证标签的唯一性 如<input key="usernalme"> ,<div :key="item.id"></div> ,同时选择key值的时候尽量不要用Index的值作为key值</p>
+<p>–关于列表渲染–</p>
+<p>8、<br>关于数组的数据变异方法：<br>方法一：改变数据的引用<br>方法二：应用以下七种方法，不能直接始用下标来操作数组，否则在页面上显示不了改变的数据。</p>
+<p>  splice（）–截取或者操作数组的一个方法，如vm.list.splice(1,1,{id=”222” , text=”2”}) –意思是从下标是1的地方开始删除一条，并且往里面增加一条id为222，text为2的数据<br>  push:在数组后面添加一个元素<br>  pop:删除数组最后一个元素<br>  shift：把数组第一项删除<br>  unshift:往数组的第一项加内容<br>  sort：数组排序<br>  reverse：数组取反</p>
+<p>方法三:使用vue中的set方法<br>  如 userinfo[1,2,3]<br>  要变更数据将下标为0的数据变为3–<br>  vm.set(userinfo,0,3)，<br>  或使用vue的set实例方法–<br>  vm.$set(userinfo,0,3)</p>
+<p>9、如果有偶多个循环的列表同时渲染，可以使用template模板占位符，template标签不会被渲染到页面</p>
+<p>10、关于对对象的循环：动态往对象里面添加键名与键值是没有用的，也要修改引用，即将原来的对象数据复制到控制台后再在对象里面添加需要加的键名（key)与键值–[name(键名key):Lee(键值)]。<br>但是可以直接修改已经存在的键名的键值</p>
+<p>方法二：使用set方法：vue.set(obj,key,value)</p>
+<p>–总的来说vue的set方法–<br>对象：<br>全局使用：Vue.set(obj,key,value)<br>vue实例：vm.$set(obj,key,value)<br>数组：<br>全局使用：Vue.set(arr,index,value)<br>vue实例：vm.$set(arr,index,value)</p>
+<p>–关于组件的细节点–</p>
+<p>11、组件中用is来解决标签规范问题，table标签下必须是tr,td,同样，ul下面是li，select下是option</p>
+<p><tr is="row"> row组件中有tr,td</tr></p>
+<p>12、子组件的data必须是函数，不是对象，且必须返回对象</p>
+<p>13、ref的使用：<br>    1.在标签中定义如ref=”tag”<br>    2.使用：this.$refs.tag—表示当前标签的节点</p>
+<p>–父子组件间的数据传递–</p>
+<p>14、<br>    1.父组件向子组件传值：<br>      1.1 子组件通过props接收<br>      1.2 单向数据流：父组件可以随意向子组件传递参数，子组件不可以改父组件的参数，如果要改变参数，子组件在data中定义一个变量来接受父组件变量的值再进行修改<br>    2.子组件向父组件传值：使用this.$emit(‘方法名’，参数1，参数2…)可携带多个参数</p>
+<p>–非父子组件间的传值–<br>15、<br>    1、Vuex<br>    2、总线机制/Bus/发布订阅模式/观察者模式<br>    2.1<br>    在Vue的prototype上定义bus（Vue实例）–Vue.prototype.bus = new Vue();<br>    2.2<br>    在组件的methods定义的方法里使用 this.bus.$emit(‘事件名’, value); 使用总线上的bus属性向外触发事件并携带value<br>    2.3<br>    在组件的mounted生命周期钩子里使用this.bus.$on(‘事件名’, function(value){});$on来监听通过bus向外触发的事件并获取携带的值，然后在回调函数里进行操作。</p>
+<p>–插槽–<br>16、<br>    作用：希望子组件内展示父组件内传递来的dom<br>    solt：在子组件内直接放dom，在组件的tempalte中用<slot></slot>来代替这个dom使用<br>    可以在slot中定义默认值<br>    具名插槽：slot=””取名<br>    slot里 name=“”取名<br>    通过props传值时，v-html必须包裹div （template没用）</p>
+<p>–在Vue中同时使用过渡与动画–<br>17、<br>    1.在需要设置过度动画的元素外包裹<transition>标签，然后再设置对应的样式（v-enter,v-enter-active;v-leave-to,v-leave-active)<br>    2.如果不想用默认的类，可以自定义类：enter-active-class=”active”,然后写.active的样式<br>    3.使用animate.css：引入animate.css后，在需要动画的标签外的transition标签里添加对应属性，比如enter-active-class=“animated swing”，leave-active-class=“animated shake”<br>    4.选择以哪种动画为最佳时长：type=”transition”<br>    自定义动画时长：:duration=”5000”<br>    或单独分别设置出场入场动画：:duration={enter: 5000, leave:1000}</transition></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/02/16/about-vue/" data-id="cjsq04k3i00029ctfy2a1lep2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/02/16/a/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/wechat/">wechat</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/wechat/" style="font-size: 10px;">wechat</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/02/16/about-vue/">about vue</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/16/a/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/11/new/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/03/about-wechat/">学习微信小程序的一些笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/15/note6/">note6</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 <br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
